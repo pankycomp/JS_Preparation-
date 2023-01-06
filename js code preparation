@@ -1,0 +1,17 @@
+1. Can we add multiple Callback for function ?
+Yes. We can add multiple call back, they willbe executing one after another.
+function getArrayDetails(array, callback, callback2) {
+  arr.push(100);
+  callback();
+  callback2();
+}
+
+var array = [10, 20, 30, 40, 50]
+
+getArrayDetails(array, function() {
+  array.push(100);
+  console.log('100 added by callback function 1', array);
+}, function() {
+ arr.aypush(200);
+ console.log('200 added by callback function 2', array);
+});
